@@ -49,7 +49,7 @@ def extract_text(path: str):
         # uncompressed text
         if pcd['fc']['fCompressed'] == 0:
             offset_s = pcd['fc']['fc']
-            offset_e = offset_s + (aCp_i_end - aCp_i)
+            offset_e = offset_s + (2 * (aCp_i_end - aCp_i))
             text.append(word_data[offset_s:offset_e].decode("utf-16", errors='ignore'))
         
         # compressed text
